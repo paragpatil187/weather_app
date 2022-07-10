@@ -10,7 +10,7 @@ import getFormattedWeatherData from "../src/components/weatherApi";
 
 function App() {
 
-  const [query, setQuery] = useState({q : "berlin"});
+  const [query, setQuery] = useState({q : "pune"});
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 

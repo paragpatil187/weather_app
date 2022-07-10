@@ -30,19 +30,18 @@ const Inputs = ({setQuery, setUnits, units}) => {
          <UilLocationPoint
         onClick={handleLocationClick}
           size={25}
-          className=""
+          className="location"
         />
         <input
         value={city}
         onChange={(e) => setCity(e.target.value)}
-          placeholder="search for city..."
-          type="text"
+          
           className="input-third"
         />
         <UilSearch
          onClick={handleSearchClick}
           size={25}
-          className="text-white cursor-pointer transition ease-out hover:scale-125"
+          className="Search"
         />
        
       </div>
