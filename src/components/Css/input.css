@@ -1,0 +1,16 @@
+.input-main-div{
+    border: 2px solid red;
+}
+
+.input-second-div{
+    border: 3px solid green;
+}
+
+
+.input-third{
+    border: 3px solid blue;
+    width: 60%;
+    height: 30px;
+}
+
+
