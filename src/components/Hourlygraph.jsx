@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Chart from "react-apexcharts"
+import "./Css/Hourlygraph.css"
 
 const Hourly = ({ items }) => {
     const chartDatatemp = items.map((el) => {
@@ -15,27 +16,45 @@ const Hourly = ({ items }) => {
     const res = {
         options: {
             chart: {
-                id: "basic-bar"
+                height: 280,
+    type: "area"
             },
             xaxis: {
                 categories: chartDatatitle
             }
         },
+        
         series: [
             {
-                name: "series-1",
+                type:"area",
+                name: "temp",
                 data: chartDatatemp
             }
-        ]
+        ],
+        dataLabels: {
+            enabled: false
+          },
+        
+        fill: {
+            type: "gradient",
+            gradient: {
+              shadeIntensity: 1,
+              opacityFrom: 0.7,
+              opacityTo: 0.9,
+              stops: [0, 90, 100]
+            }
+          },
+        
+        
     };
 
 
 
     return (
         <>
-            <h1>hello</h1>
+            <h1>Hourly chart</h1>
 
-            <div className="app">hourly
+            <div className="app">
                 <div className="row">
                     <div className="mixed-chart">
                         <Chart
