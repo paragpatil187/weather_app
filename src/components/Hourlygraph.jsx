@@ -1,49 +1,58 @@
-import {
-    ResponsiveContainer,
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Legend,
-    Tooltip,
-  } from "recharts";
-  
-  const Hourly = ({ items }) => {
-    const chartData = items.map((el) => {
-      return el;
+
+import React from 'react'
+import Chart from "react-apexcharts"
+
+const Hourly = ({ items }) => {
+    const chartDatatemp = items.map((el) => {
+        return el.temp;
     });
-  
+    console.log("chartData:", chartDatatemp)
+    const chartDatatitle = items.map((el) => {
+        return el.title;
+    });
+
+
+    const res = {
+        options: {
+            chart: {
+                id: "basic-bar"
+            },
+            xaxis: {
+                categories: chartDatatitle
+            }
+        },
+        series: [
+            {
+                name: "series-1",
+                data: chartDatatemp
+            }
+        ]
+    };
+
+
+
     return (
-      <div style={{ textAlign: "left" }}>
-        <p>Hourly Chart</p>
-        <hr />
-        <div
-          style={{ overflowX: "auto", overflowY: "hidden", textAlign: "left" }}
-        >
-          <ResponsiveContainer width="150%" aspect={3}>
-            <LineChart
-              data={chartData}
-              width={500}
-              height={300}
-              margin={{ top: 10, right: 30, left: 5, bottom: 5 }}
-            >
-              <XAxis dataKey="title" />
-              <YAxis dataKey="temp" tickFormatter={(value) => value + "°C"} />
-              <Tooltip />
-              <Legend />
-              <CartesianGrid strokeDasharray="4 4" />
-              <Line
-                type="monotone"
-                dataKey="temp"
-                stroke="blue"
-                activeDot={{ r: 20 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-    );
-  };
-  
-  export default Hourly;
+        <>
+            <h1>hello</h1>
+
+            <div className="app">hourly
+                <div className="row">
+                    <div className="mixed-chart">
+                        <Chart
+                            options={res.options}
+                            series={res.series}
+                            type="line"
+                            width="1000"
+                        />
+                    </div>
+                </div>
+            </div>
+
+
+        </>)
+}
+
+
+
+
+export default Hourly

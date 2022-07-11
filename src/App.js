@@ -5,7 +5,6 @@ import Inputs from "./components/Inputs";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
 import getFormattedWeatherData from "../src/components/weatherApi";
-import countries from "./components/Utils"
 import Hourly from "./components/Hourlygraph";
 
 
@@ -18,7 +17,6 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    //const message = query.q ? query.q : "current location."
     const fetchWeather = async () => {
       await getFormattedWeatherData({...query, units }).then(data=> {
         setWeather(data);
@@ -27,20 +25,20 @@ function App() {
     fetchWeather();
   }, [ query, units])
 
-  useEffect(() => {
-    if (query === "") {
-      setSuggestions([]);
-    } else {
-      let newListOfSuggestions = countries
-        .filter((item) =>
-          item.country.toLowerCase().indexOf(query) !== -1 ? true : false
-        )
-        .map((item) => item.country);
-      setSuggestions(newListOfSuggestions);
-    }
-    console.log("suggestions:",suggestions)
-    setTimeout(() => setLoading(false), 1000);
-  }, [query]);
+  // useEffect(() => {
+  //   if (query === "") {
+  //     setSuggestions([]);
+  //   } else {
+  //     let newListOfSuggestions = countries
+  //       .filter((item) =>
+  //         item.country.toLowerCase().indexOf(query) !== -1 ? true : false
+  //       )
+  //       .map((item) => item.country);
+  //     setSuggestions(newListOfSuggestions);
+  //   }
+  //   console.log("suggestions:",suggestions)
+  //   setTimeout(() => setLoading(false), 1000);
+  // }, [query]);
 console.log(weather);
   return (
     <div className="main-app-div">
@@ -52,14 +50,13 @@ console.log(weather);
              <Forecast title="daily forecast" items={weather.daily}/>
              <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />
-             
              <TemperatureAndDetails weather={weather}/>
              
                 
 
                
             </>
-         )};
+         )}
 
          
 
