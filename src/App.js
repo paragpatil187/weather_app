@@ -5,7 +5,8 @@ import Inputs from "./components/Inputs";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
 import getFormattedWeatherData from "../src/components/weatherApi";
-
+import countries from "./components/Utils"
+import Hourly from "./components/Hourlygraph";
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
   const [query, setQuery] = useState({q : "pune"});
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     //const message = query.q ? query.q : "current location."
@@ -23,15 +26,31 @@ function App() {
     }
     fetchWeather();
   }, [ query, units])
+
+  useEffect(() => {
+    if (query === "") {
+      setSuggestions([]);
+    } else {
+      let newListOfSuggestions = countries
+        .filter((item) =>
+          item.country.toLowerCase().indexOf(query) !== -1 ? true : false
+        )
+        .map((item) => item.country);
+      setSuggestions(newListOfSuggestions);
+    }
+    console.log("suggestions:",suggestions)
+    setTimeout(() => setLoading(false), 1000);
+  }, [query]);
 console.log(weather);
   return (
     <div className="main-app-div">
         
-         <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
+         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} suggestions={suggestions} trail={(val)=>setQuery(val)}/>
 
          { weather && (
             <>
              <Forecast title="daily forecast" items={weather.daily}/>
+             <Hourly items={weather.hourly} />
                 <TimeAndLocation weather={weather}/>
                 <TemperatureAndDetails weather={weather}/>
 
