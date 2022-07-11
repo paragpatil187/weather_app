@@ -56,7 +56,7 @@ const Hourly = ({ items }) => {
 
     return (
         <>
-            <h1>Hourly chart</h1>
+            
 
             <div className="app">
                 <div className="row">
