@@ -60,7 +60,7 @@ const Hourly = ({ items }) => {
 
             <div className="app">
                 <div className="row">
-                    <div className="mixed-chart">
+                    <div className="mixed-chart" style={{opacity:"0.6"}}>
                         <Chart
                             options={res.options}
                             series={res.series}

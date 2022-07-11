@@ -6,6 +6,7 @@ import TemperatureAndDetails from "./components/TemperatureAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
 import getFormattedWeatherData from "../src/components/weatherApi";
 import Hourly from "./components/Hourlygraph";
+import UnkownGraph from "./components/UnkownGraph";
 
 
 function App() {
@@ -51,6 +52,7 @@ console.log(weather);
              <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />
              <TemperatureAndDetails weather={weather}/>
+             <UnkownGraph/>
              
                 
 
