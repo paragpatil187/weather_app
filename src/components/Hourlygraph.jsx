@@ -20,7 +20,7 @@ const Hourly = ({ items }) => {
     type: "area"
             },
             xaxis: {
-                categories: chartDatatitle
+                categories: chartDatatitle                                                                                                                                                                                                  
             }
         },
         
@@ -44,6 +44,10 @@ const Hourly = ({ items }) => {
               stops: [0, 90, 100]
             }
           },
+          stroke: {
+            curve: 'smooth',
+          }
+          
         
         
     };
