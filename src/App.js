@@ -50,9 +50,12 @@ console.log(weather);
          { weather && (
             <>
              <Forecast title="daily forecast" items={weather.daily}/>
+             <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />
-                <TimeAndLocation weather={weather}/>
-                <TemperatureAndDetails weather={weather}/>
+             
+             <TemperatureAndDetails weather={weather}/>
+             
+                
 
                
             </>

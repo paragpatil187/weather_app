@@ -3,55 +3,47 @@ import "./Css/temperature.css"
 
 import { formatToLocalTime, iconUrlFromCode } from "../components/weatherApi";
 
-const TemperatureAndDetails = ({weather : {
-    details, icon, temp, temp_min, temp_max, humidity, sunrise, sunset, timezone,pressure
-}}) => {
+const TemperatureAndDetails = ({ weather: {
+  details, temp, temp_min, temp_max, humidity, sunrise, sunset, timezone, pressure
+} }) => {
   return (
     <div className="main-div-temparature">
-      <div>
-        <p>{details}</p>
-      </div>
+      <div className="pressurehumid">
+        <div className="pressurediv">
+          <span style={{ fontWeight: "700" }}> Pressure</span>
+          <span style={{ textAlign: "left" }}>{pressure}</span>
 
-      <div className="">
-        <img
-          src={iconUrlFromCode(icon)}
-          className=""
-        />
-        <p className="">{`${temp.toFixed()}°`}</p>
-        <div className="">
-         
-          <div className="">
-            
-            Humidity :<span className="">{`${humidity.toFixed()}%`}</span>
-          </div>
-          <div className="">
-            Pressure:{pressure}
-            
-          </div>
+
+        </div>
+        <div className="tempraturediv">
+          <span style={{ fontWeight: "700" }}> Humidity</span>
+          <span style={{ textAlign: "left" }}>{`${humidity.toFixed()}%`}</span>
+
         </div>
       </div>
-
-      <div className="">
-    
-        <p className="">
-          sunRise :<span className="">{formatToLocalTime( sunrise, timezone, "hh:mm a")}</span>
-        </p>
-        
-
-        
-        <p className="">
-          sunSet :<span className="">{formatToLocalTime( sunset, timezone, "hh:mm a")}</span>
-        </p>
-      
-
-        
-  
-
-        
-       
+      <div className="sundiv">
+        <div className="sunrise">
+          <span className="sunname">Sunrise</span>
+          <span className="suntime">{formatToLocalTime(sunrise, timezone, "hh:mm a")}</span>
+        </div>
+        <div className="sunset">
+          <span className="sunname">Sunset</span>
+          <span className="suntime">{formatToLocalTime(sunset, timezone, "hh:mm a")}</span>
+        </div>
       </div>
     </div>
-  );
-};
+
+
+
+
+
+
+
+
+
+
+
+  )
+}
 
 export default TemperatureAndDetails;

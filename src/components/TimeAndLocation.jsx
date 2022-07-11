@@ -1,10 +1,20 @@
 import React from 'react'
-import { formatToLocalTime } from '../components/weatherApi'
-
-const TimeAndLocation = ({weather : { dt, timezone, name, country}}) => {
+import { formatToLocalTime, iconUrlFromCode } from '../components/weatherApi'
+import "./Css/temp.css"
+const TimeAndLocation = ({weather : { dt, timezone, name, country,temp,details,icon}}) => {
   return (
-    <div>
-        <div className=''>
+    <div className='maintempdetail'>
+      <h1 style={{textAlign:"right",fontSize:"3rem",fontWeight:"700",margin:"0", color:"#000"}}>{`${temp.toFixed()}°`}</h1>
+      <img
+          src={iconUrlFromCode(icon)}
+          style={{height:"8rem",marginLeft:"0.5rem",marginTop:"-2rem"}}
+        />
+    </div>
+  )
+}
+
+export default TimeAndLocation
+ {/* <div className=''>
             <p className=''>
                 {formatToLocalTime(dt, timezone)}
             </p>
@@ -12,9 +22,4 @@ const TimeAndLocation = ({weather : { dt, timezone, name, country}}) => {
 
         <div className=''>
             <p className=''>{`${name}, ${country}`}</p>
-        </div>
-    </div>
-  )
-}
-
-export default TimeAndLocation
+        </div> */}

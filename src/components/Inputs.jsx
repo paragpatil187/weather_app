@@ -48,7 +48,7 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
         } else {
           setActive((prev) => prev + 1);
         }
-        break;
+        break
 
       //ArrowUp
       case 38:
@@ -58,42 +58,55 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
         } else {
           setActive((prev) => prev - 1);
         }
-        break;
+        break
 
       //Enter
       case 13:
-        break;
+        break
 
       default:
-        return;
+        return
     }
-  };
+  }
 
   
 
   return (
     <>
-    <SearchBarWrapper
+    
+    <div className="input-main-div">
+
+    {/* <div
         len={suggestions.length}
         onKeyUp={handleActiveSuggestions}
-      >
-        <div className="input-second-div">
+      ></div> */}
+    
+   
+        <div>
          <UilLocationPoint
         onClick={handleLocationClick}
-          size={25}
-          className="location"
+          size={40}
         />
-    <div className="input-main-div">
-      
-        <Input
+        </div>
+      <div className="inputdiv">
+        <input
         value={city}
         onChange={handleInputChange}
-          
-          className="input-third"
+        placeholder="search your city"
+        className="input"
         />
-        <RightSide>
+        </div>
+        <div>
+        <UilSearch
+         onClick={handleSearchClick}
+          size={25}
+          className="Search"
+        />
+       
+      </div>
+        {/* <div>
           {city && (
-            <Image
+            <img
               src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cross-3158260-2635455.png"
               alt="Close button"
               style={{ cursor: "pointer" }}
@@ -101,7 +114,7 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
             />
           )}
           {loading && (
-            <StyledSpinner viewBox="0 0 50 50">
+            <div viewBox="0 0 50 50">
               <circle
                 className="path"
                 cx="25"
@@ -110,102 +123,20 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
                 fill="none"
                 strokeWidth="4"
               />
-            </StyledSpinner>
-          )}
-        </RightSide>
-        <UilSearch
-         onClick={handleSearchClick}
-          size={25}
-          className="Search"
-        />
-       
-      </div>
+            </div>
+          )} */}
+        
 
-     
+      
+    
     </div>
-    </SearchBarWrapper>
+    
     </>
-  );
-};
+  )
+}
 
-export default Inputs;
-const SuggestionBox = styled.div`
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
-  max-height: 200px;
-  overflow: auto;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-color: ${({ len }) => (len ? "transparent" : "black")};
-  & * {
-    flex: 1;
-    text-align: left;
-    padding: 10px;
-    padding-left: 50px;
-  }
-  & :nth-child(${({ active }) => active}) {
-    background: lightblue;
-    color: black;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  /* & :nth-child(n + ${({ limit }) => limit + 1}) {
-    display: none;
-  } */
-`;
+export default Inputs
 
-const SearchBarWrapper = styled.div`
-  border: 1px solid black;
-  display: flex;
-  border-radius: 20px;
-  padding: 5px 10px;
-  align-items: center;
-  border-bottom-right-radius: ${({ len }) => (len ? "0px" : "20px")};
-  border-bottom-left-radius: ${({ len }) => (len ? "0px" : "20px")};
-`;
 
-const Image = styled.img`
-  height: 20px;
-  padding-right: 20px;
-`;
 
-const Input = styled.input`
-  border: none;
-  outline: none;
-  font-size: 20px;
-  flex: 1;
-`;
 
-const RightSide = styled.div``;
-
-const StyledSpinner = styled.svg`
-  animation: rotate 2s linear infinite;
-  width: 20px;
-  height: 20px;
-  & .path {
-    stroke: #5652bf;
-    stroke-linecap: round;
-    animation: dash 1.5s ease-in-out infinite;
-  }
-  @keyframes rotate {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes dash {
-    0% {
-      stroke-dasharray: 1, 150;
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -35;
-    }
-    100% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -124;
-    }
-  }
-`;

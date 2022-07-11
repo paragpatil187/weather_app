@@ -3,14 +3,11 @@
   
   
 .main-app-div{
-  color: #000101;
-font-family: Roboto, sans-serif;
-padding: 0.5rem;
+  background: #fff;
+font-weight: 600;
+margin: auto;
 max-width: 800px;
-line-height: 1.15;
-margin:auto;
-@media (min-width: 1200px){
-  margin-left: 25%;
+padding: 10px;
+text-align: center;
 }
   
-}
