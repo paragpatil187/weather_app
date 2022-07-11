@@ -28,15 +28,8 @@ text-align: center;
 }
 
 
-.Search{   
-    width:100%;
-text-align: center;
-color: #2c3e50;
-background: 0 0;
-border: none;
-position: absolute;
-right: 1rem;
-margin: 0;
+.search{   
+    
 
 }
 .location{

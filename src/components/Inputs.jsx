@@ -85,7 +85,7 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
         <div>
          <UilLocationPoint
         onClick={handleLocationClick}
-          size={40}
+          size={25}
         />
         </div>
       <div className="inputdiv">
@@ -100,7 +100,7 @@ const Inputs = ({setQuery,loading, setLoading,suggestions,trail}) => {
         <UilSearch
          onClick={handleSearchClick}
           size={25}
-          className="Search"
+          className="search"
         />
        
       </div>

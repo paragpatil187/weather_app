@@ -1,44 +1,41 @@
 
 
 .forcast-second-div{
-    border: 4px solid rgb(14, 93, 238);
+    text-align: center;
     display: flex;
-    gap:15px;
+    gap:1rem;
+font-size: .95rem;
+overflow-x: scroll;
+margin-bottom: 1.5rem;
+white-space: nowrap;
+color: #2c3e50; 
 }
 
 .forcastdiv{
-  border: 3px solid rgb(238, 14, 133);
-  position: relative;
+position: relative;
 margin: .25rem;
-  min-width: 20px; 
-  color: #2c3e50;
-  font-size: .95rem;
+color: #2c3e50;
+font-size: .95rem;
 white-space: nowrap;
     
 }
 .seconddiv{
-    display: flex;
-flex-direction: column;
-align-items: center;
+    background: #fffdf7;
+display: block;
 padding: .5rem 1rem;
 margin-right: .5rem;
 transition: box-shadow .3s ease-in;
-font-size: .95rem;
-white-space: nowrap;
 }
 
 .forcast-div-title{
     margin: 0 0 .25rem;
 font-weight: 600;
 font-size: .95rem;
-white-space: nowrap;
-text-align: center;
 }
 
-.temperature-div{
-    height: 5%;
-    display: flex;
-    gap: 10%;
+.temp-div{
+    margin: 0 0 .25rem;
+    font-weight: 600;
 }
 .pressurediv{
     background: #f3fbff;
@@ -55,6 +52,16 @@ flex-grow: 1;
 display: flex;
 flex-direction: column;
 padding: 1rem .75rem;
+}
+.forecastimage{
+    margin: .5rem;
+
+
+}
+.desc{
+    margin: 0 0 .25rem;
+    font-weight: 600;
+  text-align: center;
 }
 
 

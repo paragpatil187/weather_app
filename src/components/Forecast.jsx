@@ -9,14 +9,14 @@ const Forecast = ({ title, items }) => {
             {items.map(data => (
                 <div key={data.title} className='forcastdiv'>
                     <div className='seconddiv'>
-                    <div className='days'><p className='forcast-div-title'>{data.title}</p></div>
-                    <div className='temperature-div'>
-                        <p className=''>{`${data.min_temp.toFixed()}°`}</p>
-                        <p className=''>{`${data.max_temp.toFixed()}°`}</p>
-                    </div>
-                    <div><img src={iconUrlFromCode(data.icon)} className='' /></div>
+                    <p className='forcast-div-title'>{data.title}</p>
+                    <p className='temp-div'>
+                        <span>{`${data.min_temp.toFixed()}°`}</span>
+                        <span>{`${data.max_temp.toFixed()}°`}</span>
+                    </p>
+                    <img src={iconUrlFromCode(data.icon)} className='forecastimage' />
 
-                    <div> <p>{data.desc}</p></div>
+                    <p className='desc'>{data.desc}</p>
 
                 </div>
                 </div>
