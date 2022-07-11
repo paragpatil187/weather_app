@@ -4,7 +4,7 @@ const UnkownGraph = () => {
    const state = {
         options: {
           chart: {    
-    height: 280,
+    height: 180,
     type: "area"
           },
           xaxis: {
