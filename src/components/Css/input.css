@@ -28,10 +28,7 @@ text-align: center;
 }
 
 
-.search{   
-    
 
-}
 .location{
 left: 1rem;
 
@@ -53,7 +50,7 @@ font-weight: 600;
 
 }
 .input{
-    border: medium none;
+border: medium none;
 font-size: 20px;
 height: 100%;
 }

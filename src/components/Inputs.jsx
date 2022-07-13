@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import "./Css/input.css"
 import Bulk from "./db.json";
@@ -13,9 +13,9 @@ const [displayMode, setDisplayMode] = useState(true);
    
   const inPutBox = () => {
     setInputStyle((current) => !current);
-    {
+    
       !query ? filterBulkData("") : filterBulkData(query);
-    }
+    
     setDisplayMode(true);
   };
   const filterBulkData = (text) => {
