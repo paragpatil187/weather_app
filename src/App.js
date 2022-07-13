@@ -7,6 +7,7 @@ import TimeAndLocation from "./components/TimeAndLocation";
 import getFormattedWeatherData from "../src/components/weatherApi";
 import Hourly from "./components/Hourlygraph";
 import UnkownGraph from "./components/UnkownGraph";
+import Bottom from "./components/Bottom";
 
 
 function App() {
@@ -53,17 +54,7 @@ console.log(weather);
              <Hourly items={weather.hourly} />
              <TemperatureAndDetails weather={weather}/>
              {/* <UnkownGraph/> */}
-             <div>
-              <img className="image" src="rise-set.png" alt=""/>
-              
-
-             </div>
-             <div className="times">
-              <p>05:49 AM</p>
-              <p>07:14 PM</p>
-             </div>
-             
-                
+             <Bottom/>                
 
                
             </>
