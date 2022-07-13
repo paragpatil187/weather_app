@@ -45,7 +45,7 @@ console.log(weather);
   return (
     <div className="main-app-div">
         
-         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} suggestions={suggestions} trail={(val)=>setQuery(val)}/>
+         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} suggestions={suggestions} query={query}/>
 
          { weather && (
             <>
