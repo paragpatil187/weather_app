@@ -52,7 +52,16 @@ console.log(weather);
              <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />
              <TemperatureAndDetails weather={weather}/>
-             <UnkownGraph/>
+             {/* <UnkownGraph/> */}
+             <div>
+              <img className="image" src="rise-set.png" alt=""/>
+              
+
+             </div>
+             <div className="times">
+              <p>05:49 AM</p>
+              <p>07:14 PM</p>
+             </div>
              
                 
 
