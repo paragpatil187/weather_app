@@ -27,14 +27,15 @@ const [displayMode, setDisplayMode] = useState(true);
   };
   const handleChange = (e) => {
     filterBulkData(e.target.value);
-    setQuery(e.target.value);
+    setQuery({q:e.target.value});
     setDisplayMode(true);
   };
   const setSearch = (city) => {
     const edit = Bulk.filter((item) => {
       return item.city === city;
     });
-    setQuery(edit[0].city);
+    console.log("edit",edit)
+    setQuery({q:edit[0].city});
     setDisplayMode((current) => !current);
   };
   const handleLocationClick = () => {
@@ -49,7 +50,7 @@ const [displayMode, setDisplayMode] = useState(true);
     }
   }
 
-
+console.log("query",query)
 
 
   return (

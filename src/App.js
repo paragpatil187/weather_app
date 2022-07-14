@@ -12,7 +12,7 @@ import Bottom from "./components/Bottom";
 
 function App() {
 
-  const [query, setQuery] = useState({q : "pune"});
+  const [query, setQuery] = useState({q:"pune"});
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
