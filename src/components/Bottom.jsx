@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Css/bottom.css"
-const Bottom = () => {
+import { formatToLocalTime } from './weatherApi'
+const Bottom = ({weather:{sunrise,sunset,timezone}}) => {
   return (
     <>
     <div>
@@ -9,8 +10,8 @@ const Bottom = () => {
 
              </div>
              <div className="times">
-              <p>05:49 AM</p>
-              <p>07:14 PM</p>
+              <p>{formatToLocalTime(sunrise, timezone, "hh:mm a")}</p>
+              <p>{formatToLocalTime(sunset, timezone, "hh:mm a")}</p>
              </div>
              </>       
   )
