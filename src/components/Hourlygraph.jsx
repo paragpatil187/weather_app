@@ -16,7 +16,7 @@ const Hourly = ({ items }) => {
     const res = {
         options: {
             chart: {
-                height: 280,
+                height: 270,
     type: "area"
             },
             xaxis: {
