@@ -65,7 +65,7 @@ const Hourly = ({ items }) => {
                             options={res.options}
                             series={res.series}
                             type="line"
-                            width="800"
+                            width="1000"
                             
                         />
                     </div>
