@@ -42,9 +42,9 @@ const UnkownGraph = ({ weather:{sunrise,sunset,timezone}}) => {
             <Area
               type="monotone"
               dataKey="val"
-              stroke="yellow"
+              stroke="#FEDB41"
               activeDot={{ r: 8 }}
-              fill="#AA4371"
+              fill="#FEF9EE"
             />
           </AreaChart>
         </ResponsiveContainer>
