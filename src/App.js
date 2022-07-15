@@ -40,7 +40,7 @@ console.log(weather);
              <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />
              <TemperatureAndDetails weather={weather}/>
-             {/* <UnkownGraph/> */}
+              <UnkownGraph weather={weather}/>
              <Bottom weather={weather}/>                
 
                
