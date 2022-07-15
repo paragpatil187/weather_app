@@ -31,8 +31,8 @@ const UnkownGraph = ({ weather:{sunrise,sunset,timezone}}) => {
         <ResponsiveContainer width="100%" aspect="auto">
           <AreaChart
             data={chartData}
-            width={500}
-            height={300}
+            width={600}
+            height={250}
             margin={{ top: 10, right: 30, left: 5, bottom: 30 }}
           > 
             <CartesianGrid strokeDasharray="2" />
@@ -44,6 +44,7 @@ const UnkownGraph = ({ weather:{sunrise,sunset,timezone}}) => {
               dataKey="val"
               stroke="yellow"
               activeDot={{ r: 8 }}
+              fill="#AA4371"
             />
           </AreaChart>
         </ResponsiveContainer>
