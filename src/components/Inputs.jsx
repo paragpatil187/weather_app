@@ -7,7 +7,7 @@ const[display,setDisplay]=useState([]);
 const [inputStyle, setInputStyle] = useState(false);
 const [displayMode, setDisplayMode] = useState(true);
   const handleSearchClick = () => {
-    if (query) setQuery({ q: query })
+    if (!query) setQuery({ q: query })
   }
   
    

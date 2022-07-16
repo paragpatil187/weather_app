@@ -12,6 +12,7 @@ font-weight: 600;
 text-align: center;
 align-items: center;
 width: 100%;
+border:2px solid green;
 
 }
 .locationsvg{
@@ -49,12 +50,14 @@ font-weight: 600;
 
 
 
+
 }
 .input{
-border: medium none;
+border:transparent;
 font-size: 20px;
 height: 100%;
 width:100%;
+
 
 }
 .bulk-data-container{
@@ -88,6 +91,7 @@ width:100%;
      }
      .input-box input {
          font-size: 18px;
+         
      }
  }
  
