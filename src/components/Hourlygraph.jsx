@@ -36,6 +36,7 @@ const Hourly = ({ items }) => {
           },
         
         fill: {
+           color: "#83B4D7",
             type: "gradient",
             gradient: {
               shadeIntensity: 1,

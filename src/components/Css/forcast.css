@@ -4,7 +4,7 @@
     margin-top: 1rem;
     text-align: center;
     display: flex;
-    gap:0.7rem;
+    gap:0.5rem;
 font-size: .95rem;
 overflow-x: scroll;
 margin-bottom: 1.5rem;
@@ -22,7 +22,8 @@ white-space: nowrap;
     
 }
 .seconddiv{
-    background: #fffdf7;
+    background: #F3FBFF;
+    color: #000000;
 display: block;
 padding: .5rem 1rem;
 margin-right: .5rem;
