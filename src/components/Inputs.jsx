@@ -2,6 +2,7 @@ import React, {useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import "./Css/input.css"
 import Bulk from "./db.json";
+import { iconUrlFromCode } from "./weatherApi";
 const Inputs = ({ setQuery,query }) => {
 const[display,setDisplay]=useState([]);
 const [inputStyle, setInputStyle] = useState(false);
@@ -101,6 +102,7 @@ console.log("query",query)
                 <p>{e.state}</p>
               </div>
               <div className="bulk-data-icon">
+              <img src={iconUrlFromCode(display.icon)} />
                 
               </div>
             </div>
