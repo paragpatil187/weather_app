@@ -50,8 +50,13 @@ const [displayMode, setDisplayMode] = useState(true);
       })
     }
   }
-
+console.log(display,"display")
 console.log("query",query)
+const iconforcity=(required)=>{
+  
+
+
+}
 
 
   return (
@@ -102,7 +107,7 @@ console.log("query",query)
                 <p>{e.state}</p>
               </div>
               <div className="bulk-data-icon">
-              <img src={iconUrlFromCode(display.icon)} />
+              <img src={iconforcity(e.city)} />
                 
               </div>
             </div>
