@@ -32,11 +32,11 @@ console.log(weather);
   return (
     <div className="main-app-div">
         
-         
+        <Inputs setQuery={setQuery} units={units} setUnits={setUnits}  query={query} weather={weather}/>
 
          { weather && (
             <>
-            <Inputs setQuery={setQuery} units={units} setUnits={setUnits}  query={query} weather={weather}/>
+           
              <Forecast title="daily forecast" items={weather.daily}/>
              <TimeAndLocation weather={weather}/>
              <Hourly items={weather.hourly} />

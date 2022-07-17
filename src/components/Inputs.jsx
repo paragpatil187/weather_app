@@ -1,9 +1,9 @@
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import "./Css/input.css"
 import Bulk from "./db.json";
 import { iconUrlFromCode } from "./weatherApi";
-const Inputs = ({ setQuery,query }) => {
+const Inputs = ({ setQuery,query,weather }) => {
 const[display,setDisplay]=useState([]);
 const [inputStyle, setInputStyle] = useState(false);
 const [displayMode, setDisplayMode] = useState(true);
@@ -11,7 +11,7 @@ const [displayMode, setDisplayMode] = useState(true);
     if (!query) setQuery({ q: query })
   }
   
-   
+   console.log("weather",weather)
   const inPutBox = () => {
     setInputStyle((current) => !current);
     
@@ -52,11 +52,22 @@ const [displayMode, setDisplayMode] = useState(true);
   }
 console.log(display,"display")
 console.log("query",query)
-const iconforcity=(required)=>{
+// const iconforcity=async(search)=>{
+//   const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=df2e778ac7e8e0ca500cae5a0ed91927`
+//   const response = await fetch(url);
+//   const resjson=await response.json();
+//   console.log("hi",resjson)
+//   return iconUrlFromCode(resjson.icon)
+// }
+//  useEffect(()=>{
   
+//       // setdata(resjson.main)
+//       iconforcity()
+//    },[])
+// //
 
 
-}
+
 
 
   return (
@@ -107,7 +118,10 @@ const iconforcity=(required)=>{
                 <p>{e.state}</p>
               </div>
               <div className="bulk-data-icon">
-              <img src={iconforcity(e.city)} />
+              <UilLocationPoint
+            
+            size={25}
+          /> 
                 
               </div>
             </div>
