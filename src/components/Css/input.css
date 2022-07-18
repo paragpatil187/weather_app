@@ -53,10 +53,12 @@ font-weight: 600;
 
 }
 .input{
-border:transparent;
+/* border:transparent; */
 font-size: 20px;
 height: 100%;
 width:100%;
+outline: none;
+border: none;
 
 
 }
