@@ -5,7 +5,7 @@ const Bottom = ({weather:{sunrise,sunset,timezone}}) => {
   return (
     <>
     <div>
-              <img className="image" src="rise-set.png" alt=""/>
+              <img className="image" src="https://www.suntoday.org/images/sunrise-sunset.png" alt=""/>
               
 
              </div>
