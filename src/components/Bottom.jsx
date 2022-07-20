@@ -10,8 +10,8 @@ const Bottom = ({weather:{sunrise,sunset,timezone}}) => {
 
              </div>
              <div className="times">
-              <p>{formatToLocalTime(sunrise, timezone, "hh:mm a")}</p>
-              <p>{formatToLocalTime(sunset, timezone, "hh:mm a")}</p>
+              <p style={{ textAlign: "left",fontWeight:"200" }}>{formatToLocalTime(sunrise, timezone, "hh:mm a")}</p>
+              <p style={{ textAlign: "left",fontWeight:"200" }}>{formatToLocalTime(sunset, timezone, "hh:mm a")}</p>
              </div>
              </>       
   )

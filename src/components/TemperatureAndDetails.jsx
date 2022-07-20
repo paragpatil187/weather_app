@@ -11,24 +11,24 @@ const TemperatureAndDetails = ({ weather: {
       <div className="pressurehumid">
         <div className="pressurediv">
           <span style={{ fontWeight: "700" }}> Pressure</span>
-          <span style={{ textAlign: "left" }}>{pressure}</span>
+          <span style={{ textAlign: "left" ,fontWeight:"200"}}>{pressure} hpa</span>
 
 
         </div>
         <div className="tempraturediv">
           <span style={{ fontWeight: "700" }}> Humidity</span>
-          <span style={{ textAlign: "left" }}>{`${humidity.toFixed()}%`}</span>
+          <span style={{ textAlign: "left",fontWeight:"200" }}>{`${humidity.toFixed()}%`}</span>
 
         </div>
       </div>
       <div className="sundiv">
         <div className="sunrise">
           <span className="sunname">Sunrise</span>
-          <span className="suntime">{formatToLocalTime(sunrise, timezone, "hh:mm a")}</span>
+          <span className="suntime" style={{fontWeight:"200" }}>{formatToLocalTime(sunrise, timezone, "hh:mm a")}</span>
         </div>
         <div className="sunset">
           <span className="sunname">Sunset</span>
-          <span className="suntime">{formatToLocalTime(sunset, timezone, "hh:mm a")}</span>
+          <span className="suntime" style={{fontWeight:"200" }}>{formatToLocalTime(sunset, timezone, "hh:mm a")}</span>
         </div>
       </div>
     </div>
