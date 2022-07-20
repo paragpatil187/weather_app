@@ -6,12 +6,16 @@
     display: flex;
     gap:0.5rem;
 font-size: .95rem;
-overflow-x: scroll;
+/* overflow-x: scroll; */
 margin-bottom: 1.5rem;
 white-space: nowrap;
 color: #2c3e50;
 height:15rem; 
 }
+html::-webkit-scrollbar-thumb {
+    background: #bb0202;
+    border-radius: 10px;
+  }
 
 .forcastdiv{
 position: relative;
