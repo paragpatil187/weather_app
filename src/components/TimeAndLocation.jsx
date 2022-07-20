@@ -5,7 +5,7 @@ const TimeAndLocation = ({weather : { dt, timezone, name, country,temp,details,i
   return (
     <>
     <div className='maintempdetail'>
-      <h1 style={{textAlign:"right",fontSize:"3rem",fontWeight:"700",margin:"0", color:"#000",marginLeft:"1rem"}}>{`${temp.toFixed()}°`}</h1>
+      <h1 style={{textAlign:"right",fontSize:"3rem",fontWeight:"700",margin:"0", color:"#000",marginLeft:"1rem"}}>{`${temp.toFixed()}°C`}</h1>
       <img
           src={iconUrlFromCode(icon)}
           style={{height:"8rem",marginLeft:"0.5rem",marginTop:"-2rem"}}
