@@ -9,6 +9,7 @@ const [inputStyle, setInputStyle] = useState(false);
 const [displayMode, setDisplayMode] = useState(true);
   const handleSearchClick = () => {
     if (!query) setQuery({ q: query })
+    setDisplayMode(false)
   }
   
    console.log("weather",weather)
