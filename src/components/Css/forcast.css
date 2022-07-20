@@ -12,9 +12,8 @@ white-space: nowrap;
 color: #2c3e50;
 height:15rem; 
 }
-html::-webkit-scrollbar-thumb {
-    background: #bb0202;
-    border-radius: 10px;
+.forcast-second-div::-webkit-scrollbar-track {
+    background: #f1f1f1; 
   }
 
 .forcastdiv{
