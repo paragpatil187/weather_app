@@ -2,6 +2,7 @@ import React from 'react'
 import { formatToLocalTime, iconUrlFromCode } from '../components/weatherApi'
 import "./Css/temp.css"
 const TimeAndLocation = ({weather : { dt, timezone, name, country,temp,details,icon}}) => {
+  console.log(icon)
   return (
     <>
     <div className='maintempdetail'>

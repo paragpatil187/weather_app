@@ -75,7 +75,7 @@ console.log("query",query)
     <>
  <form onSubmit={(e)=>e.preventDefault()}>
       <div className="input-main-div" style={{
-            border: inputStyle ? "2px solid #131313" : "none",
+            border: inputStyle ? "2px solid #0060DF" : "none",
           }}>
        
         <div>
