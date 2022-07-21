@@ -4,15 +4,15 @@ import "./Css/forcast.css"
 import TimeAndLocation from './TimeAndLocation'
 import Timed from './Timed'
 
-const Forecast = ({ title, items }) => {
-    const [tempday,setTempday]=useState(items[0].temp);
-    const[desc,setDesc]=useState("");
-    const[icon,setIcon]=useState("");
+const Forecast = ({ title, items, weather : { dt, timezone, name, country,temp,details,icon,desc} }) => {
+    const [tempday,setTempday]=useState(temp);
+    const[desct,setDesc]=useState(desc);
+    const[icons,setIcon]=useState(icon);
 
 const mydata={
     tempday,
     desc,
-    icon
+    icons
 }
 
     console.log("items:", items)
@@ -23,6 +23,8 @@ const mydata={
                 <div key={data.title} className='forcastdiv'>
                     <div className='seconddiv' onClick={()=>{
                         setTempday(data.temp)
+                        setDesc(data.desc)
+                        setIcon(data.icon)
                     }}>
                     <p className='forcast-div-title'>{data.title}</p>
                     <p className='temp-div'>
@@ -39,7 +41,7 @@ const mydata={
             
         </div>
 
-<Timed mydata={mydata}/>
+{/* <Timed mydata={mydata}/> */}
 </>
 
 
