@@ -29,6 +29,7 @@ display: block;
 padding: .5rem 1rem;
 margin-right: .5rem;
 transition: box-shadow .3s ease-in;
+cursor: pointer;
 }
 
 .forcast-div-title{

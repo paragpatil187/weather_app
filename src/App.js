@@ -21,7 +21,6 @@ function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       await getFormattedWeatherData({...query, units }).then(data=> {
-        console.log("datacheck",data)
         setWeather(data);
       })
     }
