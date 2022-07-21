@@ -30,7 +30,13 @@ padding: .5rem 1rem;
 margin-right: .5rem;
 transition: box-shadow .3s ease-in;
 cursor: pointer;
+
 }
+.seconddiv:hover{
+    border:3px solid rgb(226, 20, 212);
+    border-radius: 5%;
+}
+
 
 .forcast-div-title{
     margin: 0 0 .25rem;
