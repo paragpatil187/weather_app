@@ -2,7 +2,7 @@ import React from 'react'
 import { iconUrlFromCode } from './weatherApi'
 
 const Timed = ({mydata}) => {
-console.log(mydata.tempday)
+console.log(mydata.icons)
   return (
     <div>
         <div>
@@ -10,7 +10,7 @@ console.log(mydata.tempday)
             
         </div>
         <img
-          src={iconUrlFromCode(mydata.icon)}
+          src={iconUrlFromCode(mydata.icons)}
           style={{height:"8rem",marginLeft:"0.5rem",marginTop:"-2rem"}}
         />
         <div>

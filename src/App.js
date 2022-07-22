@@ -38,7 +38,7 @@ console.log(weather);
             <>
            
              <Forecast title="daily forecast" items={weather.daily} weather={weather}/>
-             <TimeAndLocation weather={weather}/>
+             {/* <TimeAndLocation weather={weather}/> */}
              <Hourly items={weather.hourly} />
              <TemperatureAndDetails weather={weather}/>
               {/* <UnkownGraph weather={weather}/> */}

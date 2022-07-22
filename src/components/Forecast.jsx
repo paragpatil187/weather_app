@@ -41,7 +41,7 @@ const mydata={
             
         </div>
 
-{/* <Timed mydata={mydata}/> */}
+ <TimeAndLocation mydata={mydata}/>
 </>
 
 
