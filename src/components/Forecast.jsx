@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { iconUrlFromCode } from './weatherApi'
 import "./Css/forcast.css"
 import TimeAndLocation from './TimeAndLocation'
-import Timed from './Timed'
+
 
 const Forecast = ({ title, items, weather : { dt, timezone, name, country,temp,details,icon,desc} }) => {
     const [tempday,setTempday]=useState(temp);
