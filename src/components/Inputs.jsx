@@ -7,7 +7,8 @@ const Inputs = ({ setQuery,query,weather }) => {
 const[display,setDisplay]=useState([]);
 const [inputStyle, setInputStyle] = useState(false);
 const [displayMode, setDisplayMode] = useState(true);
-  const handleSearchClick = () => {
+  const handleSearchClick = (e) => {
+    // setQuery({q:e.target.value});
     if (!query) setQuery({ q: query })
     setDisplayMode(false)
     if(query.q==""){
@@ -15,7 +16,7 @@ const [displayMode, setDisplayMode] = useState(true);
     }
   }
   
-   console.log("weather",weather)
+   
   const inPutBox = () => {
     setInputStyle((current) => !current);
     
@@ -32,8 +33,8 @@ const [displayMode, setDisplayMode] = useState(true);
   };
   const handleChange = (e) => {
     filterBulkData(e.target.value);
-    setQuery({q:e.target.value});
     setDisplayMode(true);
+    setQuery({q:e.target.value});
   };
   const setSearch = (city) => {
     const edit = Bulk.filter((item) => {
