@@ -11,12 +11,12 @@ const TimeAndLocation = ({mydata}) => {
           style={{height:"8rem",marginLeft:"0.5rem",marginTop:"-2rem"}}
         />
         <div>
+         <div className=''>
+    <p style={{fontWeight:"bold"}}>{`${mydata.name}, ${mydata.country}`}</p>
+</div>
         {/* <div className=''>
-    <p style={{fontWeight:"bold"}}>{`${name}, ${country}`}</p>
-</div> 
-        <div className=''>
     <p style={{fontWeight:"510"}}>
-        {formatToLocalTime(dt, timezone)}
+        {formatToLocalTime(mydata.dt, mydata.timezone)}
     </p>
 </div> */}
 </div>

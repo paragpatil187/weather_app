@@ -12,7 +12,12 @@ const Forecast = ({ title, items, weather : { dt, timezone, name, country,temp,d
 const mydata={
     tempday,
     desc,
-    icons
+    icons,
+    name,
+    country,
+    dt,
+    timezone,
+    details
 }
 
     console.log("items:", items)
