@@ -10,6 +10,9 @@ const [displayMode, setDisplayMode] = useState(true);
   const handleSearchClick = () => {
     if (!query) setQuery({ q: query })
     setDisplayMode(false)
+    if(query.q==""){
+      alert("please enter city name")
+    }
   }
   
    console.log("weather",weather)
@@ -92,6 +95,8 @@ console.log("query",query)
             onChange={handleChange}
             placeholder="search your city"
             className="input"
+            
+
 
           />
         </div>
