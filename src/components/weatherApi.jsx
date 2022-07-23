@@ -52,7 +52,9 @@ const formatForecastWeather = (data) => {
             hourly
         } = data;
 
-        daily = daily.slice(1,9).map(d => {
+        daily = daily
+        .slice(1,9)
+        .map(d => {
             return {
                 title : formatToLocalTime(d.dt, timezone, "ccc"),
                 temp : d.temp.day,
@@ -64,7 +66,9 @@ const formatForecastWeather = (data) => {
             }
         });
 
-        hourly = hourly.slice(1,15).map(d => {
+        hourly = hourly
+         .slice(1,15)
+        .map(d => {
             return {
                 title : formatToLocalTime(d.dt, timezone, "hh:mm a"),
                 temp : d.temp,

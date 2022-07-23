@@ -9,12 +9,13 @@ const [inputStyle, setInputStyle] = useState(false);
 const [displayMode, setDisplayMode] = useState(true);
   const handleSearchClick = (e) => {
      setQuery({q:e.target.value});
-    if (!query) setQuery({ q: query })
+     if (!query) setQuery({ q: query })
     setDisplayMode(false)
     if(query.q==""){
       alert("please enter city name")
     }
   }
+  
   
    
   const inPutBox = () => {
