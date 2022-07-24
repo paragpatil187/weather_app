@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import "./Css/input.css"
 import Bulk from "./db.json";
-import { iconUrlFromCode } from "./weatherApi";
+//import { iconUrlFromCode } from "./weatherApi";
 const Inputs = ({ setQuery,query,weather }) => {
 const[display,setDisplay]=useState([]);
 const [inputStyle, setInputStyle] = useState(false);
@@ -41,7 +41,7 @@ const [displayMode, setDisplayMode] = useState(true);
     const edit = Bulk.filter((item) => {
       return item.city === city;
     });
-    console.log("edit",edit)
+    //console.log("edit",edit)
     setQuery({q:edit[0].city});
     setDisplayMode((current) => !current);
   };
@@ -56,21 +56,8 @@ const [displayMode, setDisplayMode] = useState(true);
       })
     }
   }
-console.log(display,"display")
-console.log("query",query)
-// const iconforcity=async(search)=>{
-//   const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=df2e778ac7e8e0ca500cae5a0ed91927`
-//   const response = await fetch(url);
-//   const resjson=await response.json();
-//   console.log("hi",resjson)
-//   return iconUrlFromCode(resjson.icon)
-// }
-//  useEffect(()=>{
-  
-//       // setdata(resjson.main)
-//       iconforcity()
-//    },[])
-// //
+//console.log(display,"display")
+//console.log("query",query)
 
 
 
@@ -142,6 +129,21 @@ console.log("query",query)
 }
 
 export default Inputs
+
+// const iconforcity=async(search)=>{
+//   const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=df2e778ac7e8e0ca500cae5a0ed91927`
+//   const response = await fetch(url);
+//   const resjson=await response.json();
+//   console.log("hi",resjson)
+//   return iconUrlFromCode(resjson.icon)
+// }
+//  useEffect(()=>{
+  
+//       // setdata(resjson.main)
+//       iconforcity()
+//    },[])
+// //
+
 
 
 

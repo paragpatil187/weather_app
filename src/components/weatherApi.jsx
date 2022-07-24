@@ -45,7 +45,7 @@ const formatCurrentWeather = (data) => {
 };
 
 const formatForecastWeather = (data) => {
-    console.log("data:",data)
+    //console.log("data:",data)
         let {
             timezone,
             daily,

@@ -7,7 +7,7 @@ const Hourly = ({ items }) => {
     const chartDatatemp = items.map((el) => {
         return el.temp;
     });
-    console.log("chartData:", chartDatatemp)
+   // console.log("chartData:", chartDatatemp)
     const chartDatatitle = items.map((el) => {
         return el.title;
     });
@@ -36,7 +36,7 @@ const Hourly = ({ items }) => {
           },
         
         fill: {
-           color: "#83B4D7",
+           
             type: "gradient",
             gradient: {
               shadeIntensity: 1,
